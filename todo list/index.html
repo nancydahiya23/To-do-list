@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>To-Do List App</h1>
+            <div class="task-details">
+                <p class="total">Total Task:0</p>
+                <p class="pending">Pending Task:0</p>
+            </div>
+        </div>
+        <div class="input">
+            <input class="inputbox" type="text" placeholder="Enter your task....">
+            <button class="cancel-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="add-btn">Add</button>
+        </div>
+        <div class="list-container">
+            <article class="list">
+                <p class="items checked">Make a todo list</p>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-trash"></i>
+            </article>
+        </div>
+        <p class="error-message">Task Added Successfully</p>
+        <button class="clearall-btn">Clear All</button>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
