@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333535;
+}
+
+body {
+    background: linear-gradient(90deg, #2274d1,
+     #031472);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100%;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    width: 100%;
+}
+
+.task-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+}
+
+.pending {
+    color: #ff8800;
+}
+
+.title h1 {
+    font-weight: 800;
+    font-size: 33px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.input {
+    width: 100%;
+    background: #fff;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 2px 20px #000;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.input input {
+    background: transparent;
+    flex: 1;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.input:focus {
+    border-bottom: 1px solid #006bab;
+}
+
+button {
+    outline: none;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
+.cancel-btn {
+    background: #a09b9b;
+    border-radius: 50%;
+    height: 27px;
+    width: 27px;
+    line-height: 30px;
+    display: none;
+}
+
+.cancel-btn:hover {
+    background-color: #000;
+}
+
+.add-btn {
+    padding: 8px 20px;
+    background: #008bde;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+}
+
+.add-btn:hover{
+    background-color: #006bab;
+}
+
+.clearall-btn {
+    width: fit-content;
+    background-color: #cd6787;
+    padding: 10px 20px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.list-container {
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    min-height: 15px;
+    max-height: fit-content;
+    padding: 20px 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list-container .list {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.items {
+    flex: 1;
+    padding: 10px 20px 10px 30px;
+    font-size: 20px;
+    position: relative;
+    background: #c4c4b0;
+    user-select: none;
+}
+
+.items:before {
+    content: "";
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    top: 50%;
+    left: 1.5%;
+    transform: translateY(-50%);
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.items.checked {
+    text-decoration: line-through;
+    color: #353333;
+}
+
+.items.checked::before {
+    background-color: #3a4452;
+    content: '\2713';
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+article i {
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.fa-solid.fa-pen-to-square:hover {
+    background-color: #964b00;
+    color: #fff;
+}
+
+.fa-solid.fa-trash:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Error message */
+.error-message {
+    position: absolute;
+    top:1%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px 10px 20px 30px;
+    font-weight: bold;
+    min-width: 300px;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px #000;
+    overflow: hidden;
+}
+.error-message:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 15px;
+    background: red;
+    top: 0;
+    left: 0;
+}
+.error-message.success {
+    background: #a8f1c6;
+}
+.error-message.warning {
+    background: #ff7f7f;
+}
+.error-message.inform {
+    background-color: #cbc3e3;
+}
+.error-message.success:before {
+    background: #039c03;
+}
+.error-message.warening:before {
+    background: #ff0000;
+}
+.error-message.inform:before {
+    background: #a020f0;
+}
